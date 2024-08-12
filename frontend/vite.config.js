@@ -9,7 +9,7 @@ export default defineConfig({
   },
   proxy: {
     '/api': {
-      target: 'http://localhost:5000'
+      target: 'https://chat-app-mernstack-j7mk.onrender.com'
     }
   }
 })

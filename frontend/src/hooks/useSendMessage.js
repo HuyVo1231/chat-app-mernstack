@@ -10,7 +10,7 @@ export const useSendMessage = () => {
     setLoading(true)
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/messages/send/${selectedConversation._id}`,
+        `https://chat-app-mernstack-j7mk.onrender.com/api/messages/send/${selectedConversation._id}`,
         { message },
         { withCredentials: true }
       )

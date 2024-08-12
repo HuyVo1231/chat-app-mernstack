@@ -10,9 +10,12 @@ const useConversation = () => {
     const getConversation = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('http://localhost:5000/api/user/getAll', {
-          withCredentials: true
-        })
+        const res = await axios.get(
+          'https://chat-app-mernstack-j7mk.onrender.com/api/user/getAll',
+          {
+            withCredentials: true
+          }
+        )
 
         setConversations(res.data)
       } catch (error) {

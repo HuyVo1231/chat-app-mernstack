@@ -10,7 +10,7 @@ export const useGetMessage = () => {
       setLoading(true)
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/messages/${selectedConversation._id}`,
+          `https://chat-app-mernstack-j7mk.onrender.com/api/messages/${selectedConversation._id}`,
           {
             withCredentials: true
           }

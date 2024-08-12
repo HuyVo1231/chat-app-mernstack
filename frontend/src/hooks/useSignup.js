@@ -14,7 +14,7 @@ const useSignup = () => {
     setLoading(true)
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/signup',
+        'https://chat-app-mernstack-j7mk.onrender.com/api/auth/signup',
         {
           fullName,
           username,

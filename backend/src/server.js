@@ -12,7 +12,7 @@ import { app, server } from './socket/socket.js'
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://chat-app-mernstack-j7mk.onrender.com',
     credentials: true
   })
 )

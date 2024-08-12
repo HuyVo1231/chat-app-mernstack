@@ -14,7 +14,7 @@ const useLogin = () => {
     setLoading(true)
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://chat-app-mernstack-j7mk.onrender.com/api/auth/login',
         {
           username,
           password

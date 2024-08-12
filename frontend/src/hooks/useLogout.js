@@ -11,7 +11,7 @@ const useLogout = () => {
     setLoading(true)
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/auth/logout',
+        'https://chat-app-mernstack-j7mk.onrender.com/api/auth/logout',
         {},
         {
           withCredentials: true
