@@ -2,22 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  ::-webkit-scrollbar {
-    width: 20px;
+/* Định nghĩa animation */
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    transform: translateX(0);
   }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
 
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
+/* Áp dụng animation */
+.shake {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation: shake-horizontal 0.5s ease-in-out;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
-  }
+/* Tùy chỉnh scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #e5e7eb;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-  }
+/* Đối với trình duyệt Webkit (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Độ rộng của scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb; /* Màu nền của track scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Màu của thanh cuộn */
+  border-radius: 10; /* Bo góc cho thanh cuộn */
+  border: 2px solid #e5e7eb; /* Đường viền giữa track và thumb */
 }

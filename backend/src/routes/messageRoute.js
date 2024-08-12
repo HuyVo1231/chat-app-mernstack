@@ -1,10 +1,10 @@
 import express from 'express'
 import MessageController from './../controller/messageController.js'
 import { protectRoute } from '../middleware/protectRoute.js'
-const authRouter = express.Router()
+const messageRouter = express.Router()
 
 // Define Routes Auth
-authRouter.get('/:id', protectRoute, MessageController.getMessage)
-authRouter.post('/send/:id', protectRoute, MessageController.sendMessage)
+messageRouter.get('/:id', protectRoute, MessageController.getMessage)
+messageRouter.post('/send/:id', protectRoute, MessageController.sendMessage)
 
-export default authRouter
+export default messageRouter

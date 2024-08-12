@@ -2,9 +2,17 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 import route from './routes/index.js'
+import cors from 'cors'
 // database
 import { connect } from './config/db/index.js'
-const app = express()
+import { app, server } from './socket/socket.js'
+
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+  })
+)
 
 dotenv.config()
 app.use(express.json())
@@ -16,4 +24,4 @@ route(app)
 // connect to database
 connect()
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
+server.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
