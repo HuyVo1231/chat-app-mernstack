@@ -10,7 +10,7 @@ const Message = ({ message }) => {
   const profilePic = fromMe
     ? authUser.profilePic
     : selectedConversation?.profilePic
-  const bubbleBgColor = fromMe ? 'bg-red-200' : ''
+  const bubbleBgColor = fromMe ? 'bg-red-400' : ''
   const shakeClass = message.shouldShake ? 'shake' : ''
 
   return (
