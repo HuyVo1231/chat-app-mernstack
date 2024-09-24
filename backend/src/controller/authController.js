@@ -22,8 +22,10 @@ class AuthController {
       const passwordSalt = await bcrypt.hash(password, salt)
 
       // Avatar
-      const boyProfilePic = 'https://avatar.iran.liara.run/public/4'
-      const girlProfilePic = 'https://avatar.iran.liara.run/public/55'
+      const boyProfilePic =
+        'https://i.pinimg.com/236x/42/fb/77/42fb77fd2a15a9519723daf82b3a636d.jpg'
+      const girlProfilePic =
+        'https://eliscenter.edu.vn/wp-content/uploads/2024/09/anh-anime-4yLFpY0.jpg'
 
       const newUser = new UserModel({
         fullName,
