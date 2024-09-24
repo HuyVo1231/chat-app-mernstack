@@ -2,7 +2,8 @@ import useConversationStore from '../../zustand/useConversationStore'
 import { useSocketContext } from '../../context/SocketContext'
 
 const Conversation = ({ conversation, emoji, lastIndex }) => {
-  const { selectedConversation, setSelectedConversation } = useConversationStore()
+  const { selectedConversation, setSelectedConversation } =
+    useConversationStore()
   const isSelected = selectedConversation?._id === conversation._id
 
   const { onlineUser } = useSocketContext()
@@ -21,7 +22,9 @@ const Conversation = ({ conversation, emoji, lastIndex }) => {
         </div>
         <div className='flex flex-col flex-1'>
           <div className='flex justify-between'>
-            <p className='font-semibold text-gray-800'>{conversation.fullName}</p>
+            <p className='font-semibold text-gray-800'>
+              {conversation.fullName}
+            </p>
             <div className='swap-on text-xl'>{emoji}</div>
           </div>
         </div>
